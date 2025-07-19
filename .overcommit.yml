@@ -1,0 +1,7 @@
+PreCommit:
+  RuboCop:
+    enabled: true
+    command: ['bundle', 'exec', 'rubocop']
+    on_warn: fail  # Treat warnings as errors (optional)
+    required_executable: 'rubocop'
+    description: 'Analyzing Ruby code style with RuboCop'

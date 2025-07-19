@@ -1,0 +1,46 @@
+inherit_from: .rubocop_todo.yml
+
+# Omakase Ruby styling for Rails
+inherit_gem:
+  rubocop-rails-omakase: rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 3.2 # Adjust based on your Ruby version
+  NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'db/migrate/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'config/environments/**/*'
+    - 'config/initializers/**/*'
+    - 'test/**/*'
+    - 'spec/**/*'
+
+Layout/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false # Turn off forced doc comments for each class/module
+
+Rails/Output:
+  Enabled: false # API-only: disables warnings about puts/debug logging
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - 'config/routes.rb'
+
+Style/GuardClause:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
