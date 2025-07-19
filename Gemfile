@@ -49,3 +49,8 @@ group :development, :test do
   gem 'dotenv-rails', groups: [:development, :test]
 
 end
+
+group :development do
+  # Manage and configure Git hooks easily [https://github.com/sds/overcommit]
+  gem 'overcommit'
+end
