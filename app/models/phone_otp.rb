@@ -1,0 +1,2 @@
+class PhoneOtp < ApplicationRecord
+end
