@@ -7,4 +7,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # config/routes.rb
+  namespace :api do
+    namespace :v1 do
+      post 'login/google', to: 'auth#google'
+      post 'phone_otp/request', to: 'phone_otps#request_otp'
+      post 'phone_otp/verify',  to: 'phone_otps#verify_otp'
+    end
+  end
 end
