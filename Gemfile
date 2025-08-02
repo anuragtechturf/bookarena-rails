@@ -33,7 +33,18 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
-# gem "rack-cors"
+gem "rack-cors"
+
+# Verify and decode Google ID tokens [https://github.com/googleapis/google-id-token-ruby]
+gem 'google-id-token'
+# Encode and decode JSON Web Tokens (JWT) [https://github.com/jwt/ruby-jwt]
+gem 'jwt'
+
+# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+gem 'bcrypt', '~> 3.1.7'
+
+# Use Twilio for sending SMS and making calls [https://github.com/twilio/twilio-ruby]
+gem 'twilio-ruby', '~> 5.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
