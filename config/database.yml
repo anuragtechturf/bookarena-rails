@@ -15,7 +15,3 @@ test:
 production:
   <<: *default
 
-  # Add cable connection to fix error with solid_cable or Action Cable
-  cable:
-    <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
