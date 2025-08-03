@@ -2,7 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  url: <%= ENV['DATABASE_URL'] %> # <- this line is key
+  url: <%= ENV['DATABASE_URL'] %>
 
 development:
   <<: *default
@@ -14,3 +14,8 @@ test:
 
 production:
   <<: *default
+
+  # Add cable connection to fix error with solid_cable or Action Cable
+  cable:
+    <<: *default
+    url: <%= ENV['DATABASE_URL'] %>
